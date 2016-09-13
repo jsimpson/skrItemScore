@@ -2,6 +2,5 @@
 ## Title: |cFFC79C6Eskr|r|cffffffffItemScore
 ## Author: Skroop
 ## Notes: Adds weighted (class/spec) item value to game tooltips.
-## SavedVariables: skrItemScoreDB
 
 core.lua

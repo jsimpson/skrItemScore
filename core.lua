@@ -9,9 +9,6 @@ local GetItemStats = GetItemStats
 local strfind = strfind
 local CreateFrame = CreateFrame
 
-local f = CreateFrame("Button", nil, UIParent)
-f:Hide()
-
 local itemIdentifiers = {
   ['crit'] = 'ITEM_MOD_CRIT_RATING_SHORT',
   ['haste'] = 'ITEM_MOD_HASTE_RATING_SHORT',
@@ -160,17 +157,7 @@ local ItemTooltipHook = function(self, ...)
   local stats = GetItemStats(link)
   if not stats then return end
 
-  local _, _, id = strfind(link, "item:(%d+)")
-  if not id then return end
-
-  local score = 0
-  if f.db[classId][specId][id] then
-    score = f.db[classId][specId][id]
-  else
-    score = CalculateScore(stats)
-    f.db[classId][specId][id] = score
-  end
-
+  local score = CalculateScore(stats)
   if score == 0 or score == nil then return end
 
   self:AddLine(" ")
@@ -178,26 +165,7 @@ local ItemTooltipHook = function(self, ...)
   self:Show()
 end
 
-f:SetScript('OnEvent', function(self, event, ...)
-    if type(self[event]) == "function" then
-        return self[event](self, event, ...)
-    end
-end)
-
-function f:ADDON_LOADED(_, addon)
-  if addon:lower() ~= 'skritemscore' then return end
-  self:UnregisterEvent('ADDON_LOADED')
-
-  if not skrItemScoreDB then skrItemScoreDB = {} end
-  f.db = skrItemScoreDB
-
-  if not f.db[classId] then f.db[classId] = {} end
-  if not f.db[classId][specId] then f.db[classId][specId] = {} end
-
-  GameTooltip:HookScript("OnTooltipSetItem", ItemTooltipHook)
-  ItemRefTooltip:HookScript("OnTooltipSetItem", ItemTooltipHook)
-  ShoppingTooltip1:HookScript("OnTooltipSetItem", ItemTooltipHook)
-  ShoppingTooltip2:HookScript("OnTooltipSetItem", ItemTooltipHook)
-end
-
-f:RegisterEvent('ADDON_LOADED')
+GameTooltip:HookScript("OnTooltipSetItem", ItemTooltipHook)
+ItemRefTooltip:HookScript("OnTooltipSetItem", ItemTooltipHook)
+ShoppingTooltip1:HookScript("OnTooltipSetItem", ItemTooltipHook)
+ShoppingTooltip2:HookScript("OnTooltipSetItem", ItemTooltipHook)
