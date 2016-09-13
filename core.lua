@@ -47,11 +47,29 @@ local statWeights = {
   -- Rogue
   [4] = {
     -- Assassination
-    [1] = {},
+    [1] = {
+      ['agi'] = 1.0,
+      ['crit'] = 0.61,
+      ['vers'] = 0.69,
+      ['haste'] = 0.27,
+      ['mastery'] = 0.29,
+    },
     -- Outlaw
-    [2] = {},
+    [2] = {
+      ['agi'] = 1.0,
+      ['crit'] = 0.58,
+      ['vers'] = 0.69,
+      ['haste'] = 0.49,
+      ['mastery'] = 0.54,
+    },
     -- Subtlety
-    [3] = {},
+    [3] = {
+      ['agi'] = 1.0,
+      ['crit'] = 0.61,
+      ['vers'] = 0.70,
+      ['haste'] = 0.38,
+      ['mastery'] = 0.65,
+    },
   },
   -- Priest
   [5] = {
@@ -83,7 +101,13 @@ local statWeights = {
   -- Mage
   [8] = {
     -- Arcane
-    [1] = {},
+    [1] = {
+      ['crit'] = 0.76,
+      ['int'] = 1.0,
+      ['vers'] = 0.78,
+      ['haste'] = 0.75,
+      ['mastery'] = 0.71,
+    },
     -- Fire
     [2] = {
       ['crit'] = 1.3,
@@ -93,7 +117,13 @@ local statWeights = {
       ['mastery'] = 0.76,
     },
     -- Frost
-    [3] = {},
+    [3] = {
+      ['crit'] = 0.91,
+      ['int'] = 1.0,
+      ['vers'] = 0.79,
+      ['haste'] = 0.95,
+      ['mastery'] = 0.57,
+    },
   },
   -- Warlock
   [9] = {
