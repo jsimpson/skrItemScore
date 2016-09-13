@@ -49,26 +49,26 @@ local statWeights = {
     -- Assassination
     [1] = {
       ['agi'] = 1.0,
-      ['crit'] = 0.61,
       ['vers'] = 0.69,
-      ['haste'] = 0.27,
+      ['crit'] = 0.61,
       ['mastery'] = 0.29,
+      ['haste'] = 0.27,
     },
     -- Outlaw
     [2] = {
       ['agi'] = 1.0,
-      ['crit'] = 0.58,
       ['vers'] = 0.69,
-      ['haste'] = 0.49,
+      ['crit'] = 0.58,
       ['mastery'] = 0.54,
+      ['haste'] = 0.49,
     },
     -- Subtlety
     [3] = {
       ['agi'] = 1.0,
-      ['crit'] = 0.61,
       ['vers'] = 0.70,
-      ['haste'] = 0.38,
       ['mastery'] = 0.65,
+      ['crit'] = 0.61,
+      ['haste'] = 0.38,
     },
   },
   -- Priest
@@ -102,9 +102,9 @@ local statWeights = {
   [8] = {
     -- Arcane
     [1] = {
-      ['crit'] = 0.76,
       ['int'] = 1.0,
       ['vers'] = 0.78,
+      ['crit'] = 0.76,
       ['haste'] = 0.75,
       ['mastery'] = 0.71,
     },
@@ -118,21 +118,39 @@ local statWeights = {
     },
     -- Frost
     [3] = {
-      ['crit'] = 0.91,
       ['int'] = 1.0,
-      ['vers'] = 0.79,
       ['haste'] = 0.95,
+      ['crit'] = 0.91,
+      ['vers'] = 0.79,
       ['mastery'] = 0.57,
     },
   },
   -- Warlock
   [9] = {
     -- Affliction
-    [1] = {},
-    -- Chaos
-    [2] = {},
+    [1] = {
+      ['mastery'] = 1.04,
+      ['int'] = 1.0,
+      ['haste'] = 0.86,
+      ['crit'] = 0.75,
+      ['vers'] = 0.60,
+    },
+    -- Demonology
+    [2] = {
+      ['haste'] = 1.17,
+      ['int'] = 1.0,
+      ['crit'] = 0.75,
+      ['vers'] = 0.69,
+      ['mastery'] = 0.68,
+    },
     -- Destruction
-    [3] = {},
+    [3] = {
+      ['haste'] = 1.24,
+      ['int'] = 1.0,
+      ['crit'] = 0.85,
+      ['vers'] = 0.58,
+      ['mastery'] = 0.55,
+    },
   },
   -- Monk
   [10] = {
