@@ -6,10 +6,9 @@ local UnitClass = UnitClass
 local GetSpecialization = GetSpecialization
 local GetItemInfo = GetItemInfo
 local GetItemStats = GetItemStats
-local strfind = strfind
-local CreateFrame = CreateFrame
 
 local itemIdentifiers = {
+  ['AGI'] = 'ITEM_MOD_AGILITY_SHORT',
   ['crit'] = 'ITEM_MOD_CRIT_RATING_SHORT',
   ['haste'] = 'ITEM_MOD_HASTE_RATING_SHORT',
   ['int'] = 'ITEM_MOD_INTELLECT_SHORT',
@@ -112,7 +111,13 @@ local statWeights = {
     -- Mistweaver
     [2] = {},
     -- Windwalker
-    [3] = {},
+    [3] = {
+      ['agi'] = 1.0,
+      ['crit'] = 0.54,
+      ['haste'] = 0.46,
+      ['mastery'] = 0.62,
+      ['vers'] = 0.53,
+    },
   },
   -- Druid
   [11] = {
