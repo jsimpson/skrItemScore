@@ -8,7 +8,7 @@ local GetItemInfo = GetItemInfo
 local GetItemStats = GetItemStats
 
 local itemIdentifiers = {
-  ['AGI'] = 'ITEM_MOD_AGILITY_SHORT',
+  ['agi'] = 'ITEM_MOD_AGILITY_SHORT',
   ['crit'] = 'ITEM_MOD_CRIT_RATING_SHORT',
   ['haste'] = 'ITEM_MOD_HASTE_RATING_SHORT',
   ['int'] = 'ITEM_MOD_INTELLECT_SHORT',
@@ -139,10 +139,13 @@ local statWeights = {
   },
 }
 
-local _, _, classId = UnitClass('player')
-local specId = GetSpecialization()
+local classId, specId
 
 local CalculateScore = function(itemStats)
+  if not classId or specId then
+    classId = select(3, UnitClass('player'))
+    specId = GetSpecialization()
+  end
   local score = 0
   for stat, mod in pairs(statWeights[classId][specId]) do
     local val = itemStats[itemIdentifiers[stat]]
