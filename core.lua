@@ -156,7 +156,10 @@ local ItemTooltipHook = function(self, ...)
   if quality == 6 then return end
 
   local stats = GetItemStats(link)
+  if not stats then return end
+
   local _, _, id = strfind(link, "item:(%d+)")
+  if not id then return end
 
   local score = 0
   if f.db[classId][specId][id] then
