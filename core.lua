@@ -1,5 +1,7 @@
 local GameTooltip = GameTooltip
 local ItemRefTooltip = ItemRefTooltip
+local ShoppingTooltip1 = ShoppingTooltip1
+local ShoppingTooltip2 = ShoppingTooltip2
 local UnitClass = UnitClass
 local GetSpecialization = GetSpecialization
 local GetItemInfo = GetItemInfo
