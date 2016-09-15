@@ -4,4 +4,6 @@ This is a really naive WoW addon that will calculate an item's weighted score ba
 
 ## Weights
 
-Weights were obtained from [IcyVeins](http://www.icy-veins.com/wow/class-guides) class guides and other class and spec specific sources.
+The initial weights found in core.lua were obtained from [IcyVeins](http://www.icy-veins.com/wow/class-guides) class guides and other class and spec specific sources.
+
+If someone finds this addon and decides to try using it, I recommend that they first run simulations on their character (in SimC or via AskMrRobot) to obtain their weighted stats.
