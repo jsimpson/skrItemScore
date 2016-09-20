@@ -13,7 +13,7 @@ local itemIdentifiers = {
   ['haste'] = 'ITEM_MOD_HASTE_RATING_SHORT',
   ['int'] = 'ITEM_MOD_INTELLECT_SHORT',
   ['mastery'] = 'ITEM_MOD_MASTERY_RATING_SHORT',
-  ['vers'] = 'ITEM_MOD_VERSATILITY_RATING_SHORT',
+  ['vers'] = 'ITEM_MOD_VERSATILITY',
 }
 
 local statWeights = {
@@ -112,9 +112,11 @@ local statWeights = {
     [2] = {
       ['crit'] = 1.3,
       ['int'] = 1.0,
-      ['vers'] = 0.84,
       ['haste'] = 0.81,
-      ['mastery'] = 0.76,
+      ['int'] = 9.14,
+      ['vers'] = 7.48,
+      ['haste'] = 6.93,
+      ['mastery'] = 7.17,
     },
     -- Frost
     [3] = {
