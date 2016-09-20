@@ -110,9 +110,7 @@ local statWeights = {
     },
     -- Fire
     [2] = {
-      ['crit'] = 1.3,
-      ['int'] = 1.0,
-      ['haste'] = 0.81,
+      ['crit'] = 10.15,
       ['int'] = 9.14,
       ['vers'] = 7.48,
       ['haste'] = 6.93,
